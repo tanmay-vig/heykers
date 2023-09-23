@@ -21,14 +21,30 @@ app.get('/',(req,res)=>{
     }
     res.render('home',option);
 });
-app.post('/',(req,res)=>{
+/* app.post('/',(req,res)=>{
     const text=req.body.text;
     const newid=messages[messages.length-1].id+1;
     messages.push({id:newid,text:text,sender:isBot?"bot":"user"});
     isBot=!isBot;
-    /* console.log(isBot); */
+    console.log(isBot);
     res.redirect('/');
-});
+}); */
+app.post('/', (req, res) => {
+    // Access the form data including checkbox values
+    const checkboxData = req.body;
+    const array=Object.values(checkboxData);
+    array.shift();
+    // Checkbox values will be in checkboxData
+    setTimeout(() => {
+        console.log(array);
+    }, 20);
+  
+    // Handle the form data, e.g., store it in a database, process it, etc.
+    // ...
+  
+    // Redirect or render a response
+    res.redirect('/'); // Redirect to a thank-you page
+  });
 
 
 
