@@ -34,16 +34,22 @@
     </div>
     <!--Now the form input for new message, enclosed in a div-->
     <div class="form-input">
-        <form method="post" action="/">
+        <form method="post" action="">
             <!--WE need 1 row in which there is input field on left and small button to send on right-->
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-8">
                     <!--The input area for new message-->
                     <input type="text" name="text" class="form-control" id="inputText" aria-describedby="TextHelp">
                 </div>
                 <div class="col-lg-2">
                     <!--Submit button to forward the message-->
                     <button class="btn btn-success" type="submit" style="width: 100%;">Send</button>
+                </div>
+                <div class="col-lg-2">
+                    <!--Symptom button to open form-->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Open Form</button>
+                    <!--HERE GOES THE POPUP FORM-->
+                    <%-include("popform")%>
                 </div>
             </div>
             
