@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Tele Kiosk</title>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+
+  <nav class="navbar navbar-expand-lg bg-body-tertiary rounded" aria-label="navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample11" aria-controls="navbarsExample11" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse d-lg-flex" id="navbarsExample11">
+        <i class="fa-solid fa-heart-circle-plus fa-beat fa-xl"></i>
+        <a class="navbar-brand col-lg-3 me-0" href="#">Tele-KIOSK</a>
+        <ul class="navbar-nav col-lg-9 justify-content-lg-end">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">LINK</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">SETTINGS</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">About</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4" ;>
+               
+                    <div id="lhs">
+                      <img id="profile-imgg" src="/assets/img/profile-img.jpg" alt="Profile-pic">
+                
+                    <div class="patient-name-id">
+                    
+                        <div class="patient-name">
+                            <h5>Anonymous Maharaj</h5>
+                        </div>
+                     
+                        <div class="patient-id">
+                            <h5>#1234</h5>
+                        </div>
+                    </div>
+                    <!-- Button to Log out-->
+                    <button class="btn btn-primary">Log Out</button>
+                </div>
+            </div>
+            <!--Div for all the content on right side i.e., the chat section-->
+            <div class="col-md-8">
+                <!-- Content for the right column -->
+                <script src="https://kit.fontawesome.com/e1208cb5c0.js" crossorigin="anonymous"></script>
+
+                <div class="right-col"><!--Outer container-->
+                    <div class="outer-container"><!--chat messages-->
+                                <!--Bot message div-->
+                                <div class="bot-msg">
+                                    <!--Pattern for displaying the bot message-->
+                                    <div class="bot-pattern">
+                                        <!--Bot icon inside a div-->
+                                        <div id="bot-icon"><i class="fa-solid fa-robot fa-lg"></i></div>
+                                        <!--Bot message in side a div-->
+                                        <div id="bot-msgg">
+                                            <p>Hello, I am your personal assistant. How can I help you?</p>    
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--User message div-->
+                                <div class="user-msg">
+                                    <!-- Pattern of displaying user message -->
+                                    <div class="user-pattern">
+                                        <!--User Icon inside a div-->
+                                        <div id="user-icon"><i class="fa-solid fa-person fa-xl"></i></div>
+                                        <!--User message inside a div-->
+                                        <div id="user-msgg">
+                                            <p>I have a few symptoms I wanted to tell.</p>    
+                                        </div>
+                                    </div>
+                                </div>
+                    </div>
+                    <!--Now the form input for new message, enclosed in a div-->
+                    <div class="form-input">
+                        <form method="post" action="/">
+                            <!--WE need 1 row in which there is input field on left and small button to send on right-->
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <!--The input area for new message-->
+                                    <input type="text" name="text" class="form-control" id="inputText" aria-describedby="TextHelp">
+                                </div>
+                                <div class="col-lg-2">
+                                    <!--Submit button to forward the message-->
+                                    <button class="btn btn-success" type="submit" style="width: 100%;">Send</button>
+                                </div>
+                            </div>
+                            
+                        </form>  
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

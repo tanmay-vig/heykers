@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html,
+  body {
+    height: 100vh;
+    width: 100%;
+  }
+  
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 5px;
+  }
+  .navbar-nav li a:hover {
+    color: #1abc9c !important;
+  }
+  
+  .navbar-nav li {
+    font-weight: bolder;
+    font-size: larger;
+  }
+  
+  .container-fluid #lhs {
+    margin: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .container-fluid .row .col-md-4 {
+    height: 95vh;
+    background-color: #618264
+  }
+  
+  .container-fluid #profile-imgg {
+    width: 156px;
+    height: 166px;
+    border-radius: 50%;
+  }
+  
+  
+  .container-fluid .patient-name-id {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  .container-fluid .patient-name {
+    margin-top: 6rem;
+    border: 1px solid #ccc;
+  
+    border-radius: 30px;
+    padding: 16px;
+    display: block;
+    box-shadow: 1px 4px;
+    /* box-shadow: 38px 36px 5px -4px rgba(0,0,0,0.65); */
+    /* box-shadow: 31px 37px 5px -19px rgba(3,2,3,1);*/
+  }
+  
+  .container-fluid .patient-name  {
+    background-color: antiquewhite;
+  
+  }
+  
+  .container-fluid .patient-name h5 {
+   font-weight: 400;
+  
+  }
+  
+  .container-fluid .patient-id {
+    background-color: antiquewhite;
+  
+  }
+  
+  .container-fluid .patient-id h5 {
+    font-weight: 400;
+   
+   }
+  
+  .container-fluid .patient-id {
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 10px;
+    display: block;
+    box-shadow: 1px 4px;
+  }
+  
+  .container-fluid .patient-id h5 {
+    color: rgb(8, 30, 10);
+  }
+  
+  .container-fluid #lhs .btn {
+    box-shadow: 1px 3px black;
+    margin-top: 2rem;
+    background-color: antiquewhite;
+  
+    color: black;
+  }
+  
+  .container-fluid .col-md-8 {
+    height: 95vh;
+    background-color: #ddeddf;
+  
+  }
+  
+  .container-fluid .col-md-8 .right-col {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container-fluid .col-md-8 .right-col .outer-container {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 2rem;
+  }
+  
+  .container-fluid .col-md-8 .right-col .outer-container .bot-msg {
+    display: flex;
+    justify-content: flex-start;
+    
+  }
+  
+  .container-fluid .col-md-8 .right-col .outer-container .bot-msg .bot-pattern {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .container-fluid
+    .col-md-8
+    .right-col
+    .outer-container
+    .bot-msg
+    .bot-pattern
+    #bot-icon {
+    background-color: antiquewhite;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  
+  .container-fluid
+    .col-md-8
+    .right-col
+    .outer-container
+    .bot-msg
+    .bot-pattern
+    #bot-msgg {
+    padding: 20px;
+    margin-left: 2rem;
+    margin-right: 0;
+    background-color: #b1d8b7;
+    border-radius: 20px 20px 20px 5px;
+    box-shadow: 1px 3px 4px #618264;
+  }
+  
+  .container-fluid .col-md-8 .right-col .outer-container .user-msg {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .container-fluid .col-md-8 .right-col .outer-container .user-msg .user-pattern {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  
+  .container-fluid
+    .col-md-8
+    .right-col
+    .outer-container
+    .user-msg
+    .user-pattern
+    #user-icon {
+    background-color: antiquewhite;
+    border-radius: 50%;
+    padding: 1rem;
+   
+    
+  
+  }
+  
+  .container-fluid
+    .col-md-8
+    .right-col
+    .outer-container
+    .user-msg
+    .user-pattern
+    #user-msgg {
+    padding: 20px;
+    margin-left: 0;
+    margin-right: 2rem;
+    background-color: whitesmoke;
+    border-radius: 20px 20px 5px 20px;
+    box-shadow: 1px 3px 4px gray;
+  
+  }
+  
+  .container-fluid .col-md-8 .right-col .form-input {
+    padding: 1rem;
+    background-color: #b1d8b7;
+    border-radius: 20px 20px 20px 20px;
+  }
+  
+  
+  .footer-padding {
+    padding-bottom: 60px;
+  }
+  
+  .footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #2f5233;
+    
+  
+    /* background-color: */
+  }
+  
+  .footer p {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #ebecf1;
+   
+  
+  }
+  /* Custom CSS to make the container full width */
+  .full-width-container {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  
+  .full-width-content {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  

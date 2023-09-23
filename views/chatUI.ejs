@@ -1,0 +1,52 @@
+<script src="https://kit.fontawesome.com/e1208cb5c0.js" crossorigin="anonymous"></script>
+
+<div class="right-col"><!--Outer container-->
+    <div class="outer-container"><!--chat messages-->
+        <%messages.forEach(element => {%>
+            <%const isBot=element.sender==="bot";%>
+            <%if(isBot){%>
+                <div class="bot-msg">
+                    <!--Pattern for displaying the bot message-->
+                    <div class="bot-pattern">
+                        <!--Bot icon inside a div-->
+                        <div id="bot-icon"><i class="fa-solid fa-robot fa-lg"></i></div>
+                        <!--Bot message in side a div-->
+                        <div id="bot-msgg">
+                            <p><%=element.text%></p>    
+                        </div>
+                    </div>
+                </div>
+                <%}%>
+            <%if(!isBot){%>
+                <div class="user-msg">
+                    <!-- Pattern of displaying user message -->
+                    <div class="user-pattern">
+                        <!--User Icon inside a div-->
+                        <div id="user-icon"><i class="fa-solid fa-person fa-xl"></i></div>
+                        <!--User message inside a div-->
+                        <div id="user-msgg">
+                            <p><%= element.text %></p>    
+                        </div>
+                    </div>
+                </div>
+            <%}%>
+        <%});%>
+    </div>
+    <!--Now the form input for new message, enclosed in a div-->
+    <div class="form-input">
+        <form method="post" action="/">
+            <!--WE need 1 row in which there is input field on left and small button to send on right-->
+            <div class="row">
+                <div class="col-lg-10">
+                    <!--The input area for new message-->
+                    <input type="text" name="text" class="form-control" id="inputText" aria-describedby="TextHelp">
+                </div>
+                <div class="col-lg-2">
+                    <!--Submit button to forward the message-->
+                    <button class="btn btn-success" type="submit" style="width: 100%;">Send</button>
+                </div>
+            </div>
+            
+        </form>  
+    </div>
+</div>
