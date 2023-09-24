@@ -12,10 +12,8 @@ const messages = [
     { id: 1, text: "Hi there!", sender: "bot" },
     { id: 2, text: "Hello!", sender: "user" },
     { id: 3, text: "How can I assist you today?", sender: "bot" },
-    { id: 4, text: "I have some problems!", sender: "user" },
-    { id: 5, text: "Woah, What kind of problems?", sender: "bot" },
-    { id: 6, text: "Medical ones!", sender: "user" },
-    { id: 7, text: "So, what do you wanna tell?", sender: "bot" }
+    { id: 4, text: "I want to describe some symptoms", sender: "user" },
+    { id: 5, text: "Yes, please do.", sender: "bot" }
   ];
 app.get('/',(req,res)=>{
     const option={
@@ -58,8 +56,11 @@ app.post('/', async (req, res) => {
         result = parsedBody['result'];
         console.log("results ", result);
         const str=result.join(",");
-        const text="Got your disease! You are going to die in 2 seconds."+str;
+        const newstr=str.replace(/_/g,' ');
+        const doc="Would you like to get connected to an Expert Doctor?";
+        const text="So you are having symptoms of: \n"+newstr+"\n"+doc;
         const newid=messages[messages.length-1].id+1;
+        isBot=1;
         messages.push({id:newid,text: text,sender:isBot?"bot":"user"});
         isBot=!isBot;
         res.redirect('/');
